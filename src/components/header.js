@@ -31,7 +31,7 @@ class Header extends React.Component {
             </ul>
           </nav>
           <div className="copy">
-            <a>Menu</a>
+            <a href="#">Menu</a>
             <img src={cofeeCup}></img>
           </div>
         </div>
