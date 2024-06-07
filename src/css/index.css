@@ -672,6 +672,29 @@ main #download-div #download-info #downloadBtns button {
   border: 1px solid #403f3d;
   border-radius: 100px;
   background-color: #c1b6ad;
+  transition: 300ms;
+}
+main #download-div #download-info #downloadBtns button:hover {
+  background-color: #403f3d;
+  color: #c1b6ad;
+}
+main #download-div #download-info #downloadBtns button:hover #butImg {
+  background-image: url("../img/appStore_hover.svg");
+}
+main #download-div #download-info #downloadBtns button:hover #butImg2 {
+  background-image: url("../img/googlePlay_hover.svg");
+}
+main #download-div #download-info #downloadBtns button #butImg {
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/appStore.svg");
+  transition: 300ms;
+}
+main #download-div #download-info #downloadBtns button #butImg2 {
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/googlePlay.svg");
+  transition: 300ms;
 }
 main #download-div #download-info #downloadBtns button p {
   font-size: 10px;
@@ -685,9 +708,9 @@ main #download-div #download-info #downloadBtns button h6 {
 }
 
 footer {
+  margin: auto;
   margin-top: 100px;
   width: 1360px;
-  margin: auto;
   height: 450px;
 }
 footer #footer {
