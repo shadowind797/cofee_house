@@ -1,0 +1,21 @@
+#menu {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 50px;
+  .menuCard {
+    width: 310px;
+    border-radius: 40px;
+    border: 1px solid #403f3d;
+    text-align: left;
+    img {
+      border-radius: 40px 40px 0 0;
+    }
+    .menuInfo {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      padding: 20px;
+    }
+  }
+}
