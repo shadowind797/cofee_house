@@ -2,18 +2,21 @@ import React from "react";
 import cofeeHouse from "../img/CoffeeHouse.svg";
 import ellipse from "../img/Ellipse4.svg";
 import resourse from "../img/Resource.svg";
-import cofeeCup from "../img/coffee-cup.svg"
+import cofeeCup from "../img/coffee-cup.svg";
+import { Link } from "react-router-dom";
 
 class Header extends React.Component {
   render() {
     return (
       <div className="container">
         <div className="wrapper">
-          <div>
-          <img className="cofeeHouse" src={cofeeHouse} alt=""></img>
-          <img className="ellipse" src={ellipse} alt=""></img>
-          <img className="resourse" src={resourse} alt=""></img>
-          </div>
+          <Link to="/">
+            <div>
+              <img className="cofeeHouse" src={cofeeHouse} alt=""></img>
+              <img className="ellipse" src={ellipse} alt=""></img>
+              <img className="resourse" src={resourse} alt=""></img>
+            </div>
+          </Link>
           <nav>
             <ul class="menu">
               <li>
@@ -30,10 +33,12 @@ class Header extends React.Component {
               </li>
             </ul>
           </nav>
-          <div className="copy">
-            <a href="#">Menu</a>
-            <img src={cofeeCup}></img>
-          </div>
+          <Link to="/menu">
+            <div className="copy">
+              <p>Menu</p>
+              <img src={cofeeCup}></img>
+            </div>
+          </Link>
         </div>
       </div>
     );

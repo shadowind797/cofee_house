@@ -409,7 +409,7 @@ textarea {
 header {
   display: flex;
   width: 100%;
-  background-color: #c1b6ad;
+  background-color: #E1D4C9;
   padding: 36px;
   align-items: center;
 }
@@ -443,6 +443,9 @@ header .copy {
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+}
+header .copy p {
+  text-decoration: none;
 }
 header .copy:hover {
   opacity: 0.5;
@@ -580,6 +583,52 @@ footer #footer p img {
   padding-right: 8px;
 }
 
+h1 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  width: 800px;
+  margin: auto;
+}
+h1 span {
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+  color: #b0907a;
+}
+
+#menu-type-div {
+  display: flex;
+  width: 377px;
+  gap: 16px;
+  margin: auto;
+  margin-top: 40px;
+}
+#menu-type-div button {
+  display: flex;
+  padding: 8px 16px 8px 8px;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  border-radius: 100px;
+  background-color: #E1D4C9;
+  border: 1px solid #C1B6AD;
+  transition: 300ms;
+}
+#menu-type-div button #selectorImg {
+  background-color: #C1B6AD;
+  border-radius: 100px;
+  padding: 3px;
+}
+#menu-type-div button:hover {
+  background-color: #665f55;
+  color: #E1D4C9;
+}
+#menu-type-div button:hover #selectorImg {
+  background-color: #E1D4C9;
+}
+
 #menu {
   display: flex;
   gap: 30px;
@@ -589,11 +638,13 @@ footer #footer p img {
 #menu .menuCard {
   width: 310px;
   border-radius: 40px;
-  border: 1px solid #403f3d;
+  border: 1px solid #C1B6AD;
   text-align: left;
+  cursor: pointer;
 }
 #menu .menuCard img {
-  border-radius: 40px 40px 0 0;
+  border-radius: 40px;
+  transition: 400ms;
 }
 #menu .menuCard .menuInfo {
   display: flex;
@@ -601,11 +652,35 @@ footer #footer p img {
   gap: 12px;
   padding: 20px;
 }
+#menu .menuCard .menuInfo h3 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+#menu .menuCard .menuInfo p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+#menu .menuCard .menuInfo h6 {
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+#menu .menuCard:hover img {
+  transform-origin: top;
+  transform: scaleY(0.9);
+}
 
 body {
   font-family: "Inter", sans-serif;
-  background-color: #c1b6ad;
+  background-color: #e1d4c9;
   color: #403f3d;
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* or any color you prefer */
 }
 
 .container {
@@ -631,6 +706,7 @@ main #mainDiv {
   margin: 40px 40px 100px 40px;
   padding: 100px;
   background: url("../img/first_div_bg.jpg");
+  background-repeat: no-repeat;
   border-radius: 40px;
 }
 main #mainDiv div {
@@ -784,14 +860,14 @@ main #download-div #download-info #downloadBtns button {
   width: 200px;
   display: flex;
   gap: 2px;
-  border: 1px solid #403f3d;
+  border: 1px solid #665f55;
   border-radius: 100px;
-  background-color: #c1b6ad;
+  background-color: #e1d4c9;
   transition: 300ms;
 }
 main #download-div #download-info #downloadBtns button:hover {
-  background-color: #403f3d;
-  color: #c1b6ad;
+  background-color: #665f55;
+  color: #e1d4c9;
 }
 main #download-div #download-info #downloadBtns button:hover #butImg {
   background-image: url("../img/appStore_hover.svg");

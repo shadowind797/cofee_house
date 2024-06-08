@@ -1,7 +1,7 @@
 header {
     display: flex;
     width: 100%;
-    background-color: #c1b6ad;
+    background-color: #E1D4C9;
     padding: 36px;
     align-items: center;
     .cofeeHouse,
@@ -34,6 +34,9 @@ header {
       font-size: 16px;
       font-weight: 600;
       line-height: 150%;
+      p {
+        text-decoration: none;
+      }
       &:hover {
         opacity: 0.5;
         cursor: pointer;

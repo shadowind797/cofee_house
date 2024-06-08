@@ -6,8 +6,10 @@ import Footer from "./footer";
 import DownloadBtns from "./downloadBtns";
 import Img from "./imgs";
 import sliderImg_1 from "../img/coffee-slider-1.png";
+import sliderImg_2 from "../img/coffee-slider-2.png";
+import sliderImg_3 from "../img/coffee-slider-3.png";
 import iphoneImg from "../img/mobile-screens.png";
-import Slider from "./slider"
+import Slider from "./slider";
 
 class Home extends React.Component {
   componentDidMount() {
@@ -42,9 +44,7 @@ class Home extends React.Component {
               and those seeking a warm and inviting space to enjoy their
               favorite beverage.
             </p>
-            <button>
-              <Link to="/menu">Menu</Link>
-            </button>
+            <Link to="/menu"><button>Menu</button></Link>
           </div>
           <h2>
             Choose your <span>favorite</span> cofee
@@ -81,12 +81,37 @@ class Home extends React.Component {
                       </div>
                       <div className="slider__item">
                         <div className="slider__item-container">
-                          <div className="slider__item-content">4</div>
+                          <div className="slider__item-content">
+                            <div id="slider-img-1">
+                              <Img img={sliderImg_2} />
+                            </div>
+                            <div id="slider-text">
+                              <h5>Caramel Macchiato</h5>
+                              <p>
+                                Fragrant and unique classic espresso with rich
+                                caramel-peanut syrup, with cream under whipped
+                                thick foam.
+                              </p>
+                              <h4>$5.00</h4>
+                            </div>
+                          </div>
                         </div>
                       </div>
                       <div className="slider__item">
                         <div className="slider__item-container">
-                          <div className="slider__item-content">5</div>
+                          <div className="slider__item-content">
+                            <div id="slider-img-1">
+                              <Img img={sliderImg_3} />
+                            </div>
+                            <div id="slider-text">
+                              <h5>Ice coffee</h5>
+                              <p>
+                                A popular summer drink that tones and
+                                invigorates. Prepared from coffee, milk and ice.
+                              </p>
+                              <h4>$4.50</h4>
+                            </div>
+                          </div>
                         </div>
                       </div>
                     </div>

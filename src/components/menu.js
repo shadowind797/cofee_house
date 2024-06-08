@@ -1,7 +1,8 @@
 import React from "react";
 import Header from "./header";
 import Footer from "./footer";
-import DisplayedMenu from "./displayedMenu"
+import DisplayedMenu from "./displayedMenu";
+import MenuSelector from "./menuSelector";
 import "../css/index.css";
 
 class Menu extends React.Component {
@@ -13,6 +14,9 @@ class Menu extends React.Component {
       dessert: false,
     };
   }
+  handleMenuChange = (cofee, tea, dessert) => {
+    this.setState({ cofee, tea, dessert });
+  };
   render() {
     return (
       <div className="menuPage">
@@ -23,8 +27,8 @@ class Menu extends React.Component {
           <h1>
             Behind each of our cups hides an <span>amazing surprise</span>
           </h1>
-          <div id="menu-type-div"></div>
-          <DisplayedMenu cofee={this.state.cofee}/>
+          <MenuSelector onMenuChange={this.handleMenuChange} />
+          <DisplayedMenu {...this.state} />
         </main>
         <footer>
           <Footer />
