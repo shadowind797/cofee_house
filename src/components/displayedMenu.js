@@ -1,4 +1,5 @@
 import React from "react";
+import ItemInfo from "./itemInfo";
 import cofee1 from "../img/coffee-1.png";
 import cofee2 from "../img/coffee-2.png";
 import cofee3 from "../img/coffee-3.png";
@@ -21,11 +22,19 @@ import dessert7 from "../img/dessert-7.png";
 import dessert8 from "../img/dessert-8.png";
 
 class DisplayedMenu extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = { activeModal: false };
+    this.setModalShow = this.setModalShow.bind(this);
+  }
+  setModalShow(value) {
+    this.setState({ activeModal: value });
+  }
   render() {
     if (this.props.cofee) {
       return (
         <div id="menu" className="container">
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee1")}>
             <img src={cofee1}></img>
             <div className="menuInfo">
               <h3>Irish coffee</h3>
@@ -36,7 +45,7 @@ class DisplayedMenu extends React.Component {
               <h6>$7.00</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee2")}>
             <img src={cofee2}></img>
             <div className="menuInfo">
               <h3>Kahlua coffee</h3>
@@ -47,7 +56,7 @@ class DisplayedMenu extends React.Component {
               <h6>$7.00</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee3")}>
             <img src={cofee3}></img>
             <div className="menuInfo">
               <h3>Honey raf</h3>
@@ -55,7 +64,7 @@ class DisplayedMenu extends React.Component {
               <h6>$5.50</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee4")}>
             <img src={cofee4}></img>
             <div className="menuInfo">
               <h3>Ice cappuccino</h3>
@@ -63,7 +72,7 @@ class DisplayedMenu extends React.Component {
               <h6>$5.00</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee5")}>
             <img src={cofee5}></img>
             <div className="menuInfo">
               <h3>Espresso</h3>
@@ -71,7 +80,7 @@ class DisplayedMenu extends React.Component {
               <h6>$4.50</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee6")}>
             <img src={cofee6}></img>
             <div className="menuInfo">
               <h3>Latte</h3>
@@ -82,7 +91,7 @@ class DisplayedMenu extends React.Component {
               <h6>$5.50</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee7")}>
             <img src={cofee7}></img>
             <div className="menuInfo">
               <h3>Latte macchiato</h3>
@@ -90,7 +99,7 @@ class DisplayedMenu extends React.Component {
               <h6>$5.50</h6>
             </div>
           </div>
-          <div className="menuCard">
+          <div className="menuCard" onClick={() => this.setModalShow("cofee8")}>
             <img src={cofee8}></img>
             <div className="menuInfo">
               <h3>Coffee with cognac</h3>
@@ -98,6 +107,62 @@ class DisplayedMenu extends React.Component {
               <h6>$6.50</h6>
             </div>
           </div>
+          <ItemInfo
+            show={this.state.activeModal === "cofee1"}
+            img={cofee1}
+            onHide={() => this.setModalShow(null)}
+            header="Irish coffee"
+            description="Fragrant black coffee with Jameson Irish whiskey and whipped milk"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee2"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee2}
+            header="Kahlua coffee"
+            description="Classic coffee with milk and Kahlua liqueur under a cap of frothed milk"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee3"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee3}
+            header="Honey raf"
+            description="Espresso with frothed milk, cream and aromatic honey"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee4"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee4}
+            header="Ice cappuccino"
+            description="Cappuccino with soft thick foam in summer version with ice"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee5"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee5}
+            header="Espresso"
+            description="Classic black coffee"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee6"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee6}
+            header="Latte"
+            description="Espresso coffee with the addition of steamed milk and dense milk foam"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee7"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee7}
+            header="Latte macchiato"
+            description="Espresso with frothed milk and chocolate"
+          />
+          <ItemInfo
+            show={this.state.activeModal === "cofee8"}
+            onHide={() => this.setModalShow(null)}
+            img={cofee8}
+            header="Coffee with cognac"
+            description="Fragrant black coffee with cognac and whipped cream"
+          />
         </div>
       );
     } else if (this.props.tea) {
@@ -141,6 +206,10 @@ class DisplayedMenu extends React.Component {
               <h6>$5.50</h6>
             </div>
           </div>
+          <ItemInfo
+            show={this.state.modalShow}
+            onHide={() => this.setModalShow(false)}
+          />
         </div>
       );
     } else {
@@ -223,6 +292,10 @@ class DisplayedMenu extends React.Component {
               <h6>$6.50</h6>
             </div>
           </div>
+          <ItemInfo
+            show={this.state.modalShow}
+            onHide={() => this.setModalShow(false)}
+          />
         </div>
       );
     }
