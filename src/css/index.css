@@ -612,34 +612,37 @@ h1 span {
   align-items: center;
   gap: 8px;
   border-radius: 100px;
-  background-color: #E1D4C9;
-  border: 1px solid #C1B6AD;
+  background-color: #e1d4c9;
+  border: 1px solid #c1b6ad;
   transition: 300ms;
 }
 #menu-type-div button #selectorImg {
-  background-color: #C1B6AD;
+  background-color: #c1b6ad;
   border-radius: 100px;
   padding: 3px;
 }
 #menu-type-div button:hover {
   background-color: #665f55;
-  color: #E1D4C9;
+  color: #e1d4c9;
 }
 #menu-type-div button:hover #selectorImg {
-  background-color: #E1D4C9;
+  background-color: #e1d4c9;
 }
 
 #menu {
   display: flex;
+  justify-content: space-between;
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 #menu .menuCard {
   width: 310px;
+  height: 505px;
   border-radius: 40px;
-  border: 1px solid #C1B6AD;
+  border: 1px solid #c1b6ad;
   text-align: left;
+  position: relative;
   cursor: pointer;
 }
 #menu .menuCard img {
@@ -649,6 +652,7 @@ h1 span {
 #menu .menuCard .menuInfo {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
   gap: 12px;
   padding: 20px;
 }
@@ -666,6 +670,10 @@ h1 span {
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
+  align-self: flex-start;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
 #menu .menuCard:hover img {
   transform-origin: top;
@@ -736,7 +744,7 @@ h1 span {
 #modal #selector button #selectorImg {
   background-color: #c1b6ad;
   border-radius: 100px;
-  padding: 3px;
+  padding: 4px 8px;
 }
 #modal #selector button:hover {
   background-color: #665f55;
@@ -744,6 +752,7 @@ h1 span {
 }
 #modal #selector button:hover #selectorImg {
   background-color: #e1d4c9;
+  color: #665f55;
 }
 
 #close {
@@ -824,6 +833,8 @@ main #mainDiv p {
   width: 530px;
 }
 main #mainDiv button {
+  display: flex;
+  gap: 7px;
   width: 200px;
   padding: 20px 78px;
   background-color: #e1d4c9;
@@ -832,6 +843,13 @@ main #mainDiv button {
   line-height: 150%;
   border: none;
   border-radius: 100px;
+}
+main #mainDiv button img {
+  opacity: 0;
+  transition: 300ms;
+}
+main #mainDiv button:hover img {
+  opacity: 1.5;
 }
 main h2 {
   display: inline;
@@ -888,7 +906,19 @@ main #about span {
 }
 main #images {
   margin-top: 40px;
+}
+main #images div {
+  margin: auto;
+  display: flex;
+  gap: 40px;
+}
+main #images div img {
   vertical-align: top;
+}
+main #images div .col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
 }
 main #images .about-1 {
   width: 660px;
@@ -915,6 +945,8 @@ main #images .about-4 {
 main #download-div {
   display: flex;
   margin-top: 100px;
+  justify-content: center;
+  align-items: center;
 }
 main #download-div #download-info {
   display: flex;

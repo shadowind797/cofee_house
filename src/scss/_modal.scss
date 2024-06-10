@@ -61,13 +61,14 @@
       #selectorImg {
         background-color: #c1b6ad;
         border-radius: 100px;
-        padding: 3px;
+        padding: 4px 8px;
       }
       &:hover {
         background-color: #665f55;
         color: #e1d4c9;
         #selectorImg {
           background-color: #e1d4c9;
+          color: #665f55;
         }
       }
     }
@@ -75,16 +76,16 @@
 }
 
 #close {
-    width: 56%;
-    padding: 10px 78px;
-    margin-top: 10px;
-    margin-right: 16px;
-    border-radius: 100px;
-    background-color: #e1d4c9;
-    border: 1px solid #c1b6ad;
-    transition: 300ms;
-    &:hover {
-      background-color: #665f55;
-      color: #e1d4c9;
-    }
+  width: 56%;
+  padding: 10px 78px;
+  margin-top: 10px;
+  margin-right: 16px;
+  border-radius: 100px;
+  background-color: #e1d4c9;
+  border: 1px solid #c1b6ad;
+  transition: 300ms;
+  &:hover {
+    background-color: #665f55;
+    color: #e1d4c9;
   }
+}

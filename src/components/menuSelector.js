@@ -28,7 +28,9 @@ class MenuSelector extends React.Component {
           >
             <div
               id="selectorImg"
-              style={activeButton === "cofee" ? { backgroundColor: "#E1D4C9" } : {}}
+              style={
+                activeButton === "cofee" ? { backgroundColor: "#E1D4C9" } : {}
+              }
             >
               ☕
             </div>
@@ -48,7 +50,9 @@ class MenuSelector extends React.Component {
           >
             <div
               id="selectorImg"
-              style={activeButton === "tea" ? { backgroundColor: "#E1D4C9" } : {}}
+              style={
+                activeButton === "tea" ? { backgroundColor: "#E1D4C9" } : {}
+              }
             >
               🫖
             </div>
@@ -68,7 +72,9 @@ class MenuSelector extends React.Component {
           >
             <div
               id="selectorImg"
-              style={activeButton === "dessert" ? { backgroundColor: "#E1D4C9" } : {}}
+              style={
+                activeButton === "dessert" ? { backgroundColor: "#E1D4C9" } : {}
+              }
             >
               🍰
             </div>

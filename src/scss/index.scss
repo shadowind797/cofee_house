@@ -62,6 +62,8 @@ main {
       width: 530px;
     }
     button {
+      display: flex;
+      gap: 7px;
       width: 200px;
       padding: 20px 78px;
       background-color: #e1d4c9;
@@ -70,6 +72,15 @@ main {
       line-height: 150%;
       border: none;
       border-radius: 100px;
+      img {
+        opacity: 0;
+        transition: 300ms;
+      }
+      &:hover {
+        img {
+          opacity: 1.5;
+        }
+      }
     }
   }
   h2 {
@@ -127,7 +138,19 @@ main {
   }
   #images {
     margin-top: 40px;
-    vertical-align: top;
+    div {
+      margin: auto;
+      display: flex;
+      gap: 40px;
+      img {
+        vertical-align: top;
+      }
+      .col {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+      }
+    }
     .about-1 {
       width: 660px;
       height: 590px;
@@ -154,6 +177,8 @@ main {
   #download-div {
     display: flex;
     margin-top: 100px;
+    justify-content: center;
+    align-items: center;
     #download-info {
       display: flex;
       flex-direction: column;

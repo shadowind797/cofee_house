@@ -5,6 +5,7 @@ import MainImages from "./mainImages";
 import Footer from "./footer";
 import DownloadBtns from "./downloadBtns";
 import Img from "./imgs";
+import cofeeCup from "../img/coffee-cup.svg";
 import sliderImg_1 from "../img/coffee-slider-1.png";
 import sliderImg_2 from "../img/coffee-slider-2.png";
 import sliderImg_3 from "../img/coffee-slider-3.png";
@@ -44,7 +45,14 @@ class Home extends React.Component {
               and those seeking a warm and inviting space to enjoy their
               favorite beverage.
             </p>
-            <Link to="/menu"><button>Menu</button></Link>
+            <Link to="/menu">
+              <button>
+                Menu{" "}
+                <img
+                  src={cofeeCup}
+                ></img>
+              </button>
+            </Link>
           </div>
           <h2>
             Choose your <span>favorite</span> cofee
