@@ -38,8 +38,8 @@
 
 @media (max-width: 850px) {
   .modal {
-    max-width: 688px;
-    max-height: 626px;
+    width: 688px;
+    height: 626px;
     top: calc(50% - 252px);
     left: calc(50% - 344px);
   }

@@ -17,17 +17,27 @@ footer {
       gap: 100px;
     }
     h3 {
-      width: 530px;
+      max-width: 530px;
       font-size: 60px;
       font-weight: 600;
       line-height: 125%;
       color: #e1d4c9;
+      @media (max-width: 670px) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+      }
       span {
         font-size: 60px;
         font-style: italic;
         font-weight: 600;
         line-height: 125%;
         color: #b0907a;
+        @media (max-width: 670px) {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 125%;
+        }
       }
     }
     #socialNetworks {

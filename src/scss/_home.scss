@@ -15,18 +15,32 @@ main {
     }
     div {
       width: 530px;
+      @media (max-width: 670px) {
+        width: 316px;
+      }
       h1 {
         display: inline;
         font-size: 72px;
         font-weight: 600;
         line-height: 105%;
         color: #e1d4c9;
+        @media (max-width: 670px) {
+          font-size: 42px;
+          font-weight: 600;
+          line-height: 115%;
+          width: 316px;
+        }
         span {
           font-size: 72px;
           font-style: italic;
           font-weight: 600;
           line-height: 105%;
           color: #b0907a;
+          @media (max-width: 670px) {
+            font-size: 42px;
+            font-weight: 600;
+            line-height: 115%;
+          }
         }
       }
     }
@@ -36,7 +50,13 @@ main {
       line-height: 150%;
       color: #e1d4c9;
       margin: 40px 0;
-      width: 530px;
+      max-width: 530px;
+      @media (max-width: 670px) {
+        font-size: 16px;
+        font-weight: 400;
+        line-height: 150%;
+        max-width: 316px;
+      }
     }
     button {
       display: flex;
@@ -69,9 +89,19 @@ main {
     font-weight: 600;
     line-height: 125%;
     margin-bottom: 40px;
+    @media (max-width: 670px) {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 125%;
+    }
     span {
       font-style: italic;
       color: #b0907a;
+      @media (max-width: 670px) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+      }
     }
   }
   .slider__item-content {
@@ -79,24 +109,46 @@ main {
     #slider-text {
       margin-left: calc(50% - 240px);
       h5 {
-        width: 480px;
+        max-width: 480px;
         font-size: 24px;
         font-weight: 600;
         line-height: 125%;
         padding-bottom: 16px;
+        @media (max-width: 600px) {
+          width: 380px;
+        }
+        @media (max-width: 550px) {
+          width: 350px;
+        }
       }
       p {
-        width: 480px;
+        max-width: 480px;
         font-size: 16px;
         font-weight: 400;
         line-height: 150%;
         padding-bottom: 16px;
+        @media (max-width: 600px) {
+          width: 380px;
+        }
+        @media (max-width: 550px) {
+          width: 350px;
+        }
       }
       h4 {
-        width: 480px;
+        max-width: 480px;
         font-size: 24px;
         font-weight: 600;
         line-height: 125%;
+      }
+    }
+    img {
+      @media (max-width: 600px) {
+        width: 380px;
+        height: 380px;
+      }
+      @media (max-width: 550px) {
+        width: 350px;
+        height: 350px;
       }
     }
   }
@@ -108,12 +160,22 @@ main {
     font-size: 60px;
     font-weight: 600;
     line-height: 125%;
+    @media (max-width: 670px) {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 125%;
+    }
     span {
       color: #b0907a;
       font-size: 60px;
       font-style: italic;
       font-weight: 600;
       line-height: 125%;
+      @media (max-width: 670px) {
+        font-size: 32px;
+        font-weight: 600;
+        line-height: 125%;
+      }
     }
   }
   #images {
@@ -160,6 +222,13 @@ main {
         width: 660px;
         height: 590px;
         margin-right: 0;
+      }
+      @media (max-width: 720px) {
+        width: 540px;
+      }
+      @media (max-width: 600px) {
+        width: 450px;
+        height: 420px;
       }
     }
     .about-3 {
@@ -224,6 +293,13 @@ main {
         width: 660px;
         height: 590px;
       }
+      @media (max-width: 720px) {
+        width: 540px;
+      }
+      @media (max-width: 600px) {
+        width: 450px;
+        height: 420px;
+      }
     }
   }
   #download-div {
@@ -237,6 +313,7 @@ main {
       margin-bottom: 100px;
     }
     #download-info {
+      padding-top: 100px;
       display: flex;
       flex-direction: column;
       gap: 40px;
@@ -246,12 +323,22 @@ main {
         font-size: 60px;
         font-weight: 600;
         line-height: 125%;
+        @media (max-width: 670px) {
+          font-size: 32px;
+          font-weight: 600;
+          line-height: 125%;
+        }
         span {
           color: #b0907a;
           font-size: 60px;
           font-style: italic;
           font-weight: 600;
           line-height: 125%;
+          @media (max-width: 670px) {
+            font-size: 32px;
+            font-weight: 600;
+            line-height: 125%;
+          }
         }
       }
       p {
@@ -304,6 +391,11 @@ main {
             line-height: 150%;
           }
         }
+      }
+    }
+    #iphoneImg {
+      @media (max-width: 660px) {
+        display: none;
       }
     }
   }

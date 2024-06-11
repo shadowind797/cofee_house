@@ -4,12 +4,22 @@ h1 {
   line-height: 125%;
   max-width: 800px;
   margin: auto;
+  @media (max-width: 670px) {
+    font-size: 32px;
+    font-weight: 600;
+    line-height: 125%;
+  }
   span {
     font-size: 60px;
     font-style: italic;
     font-weight: 600;
     line-height: 125%;
     color: #b0907a;
+    @media (max-width: 670px) {
+      font-size: 32px;
+      font-weight: 600;
+      line-height: 125%;
+    }
   }
 }
 
@@ -40,6 +50,11 @@ h1 {
       #selectorImg {
         background-color: #e1d4c9;
       }
+    }
+    p {
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
     }
   }
 }

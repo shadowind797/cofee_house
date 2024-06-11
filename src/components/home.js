@@ -28,7 +28,7 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <div id="homePage">
+      <div id="homePage" className="container">
         <header id="header">
           <Header />
         </header>
@@ -144,7 +144,7 @@ class Home extends React.Component {
             <MainImages />
           </div>
           <div className="container" id="download-div">
-            <div id="download-info">
+            <div id="download-info" className="container">
               <h3>
                 <span>Download</span> our apps to start ordering
               </h3>
