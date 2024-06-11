@@ -3,6 +3,7 @@ header {
   width: 100%;
   background-color: #e1d4c9;
   padding: 36px;
+  margin-bottom: 20px;
   align-items: center;
   .cofeeHouse,
   .ellipse,
@@ -58,6 +59,23 @@ header {
     display: flex;
     gap: 17em;
     align-items: right;
+    #burger {
+      position: absolute;
+      justify-content: center;
+      align-items: center;
+      width: 44px;
+      height: 44px;
+      right: 18px;
+      top: 21px;
+      flex-direction: column;
+      gap: 8px;
+      border-radius: 100px;
+      border: 1px solid #665f55;
+      display: none;
+      @media (max-width: 850px) {
+        display: flex;
+      }
+    }
     @media (max-width: 1245px) {
       gap: 11em;
     }

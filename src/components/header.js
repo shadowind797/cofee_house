@@ -1,11 +1,19 @@
 import React from "react";
+import Burger from "./burger";
 import cofeeHouse from "../img/CoffeeHouse.svg";
 import ellipse from "../img/Ellipse4.svg";
 import resourse from "../img/Resource.svg";
 import cofeeCup from "../img/coffee-cup.svg";
+import vector from "../img/Vector.svg";
 import { Link } from "react-router-dom";
 
 class Header extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      burgerShow: false,
+    };
+  }
   render() {
     return (
       <div className="container">
@@ -39,6 +47,22 @@ class Header extends React.Component {
               <img src={cofeeCup}></img>
             </div>
           </Link>
+          <div
+            id="burger"
+            onClick={() => {
+              this.setState({ burgerShow: true });
+            }}
+          >
+            <img src={vector}></img>
+            <img src={vector}></img>
+          </div>
+          <Burger
+            className="burger"
+            show={this.state.burgerShow}
+            onHide={() => {
+              this.setState({ burgerShow: false });
+            }}
+          />
         </div>
       </div>
     );

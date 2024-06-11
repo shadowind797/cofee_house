@@ -24,13 +24,13 @@ class Menu extends React.Component {
           <Header />
         </header>
         <main>
-          <h1>
+          <h1 className="container">
             Behind each of our cups hides an <span>amazing surprise</span>
           </h1>
           <MenuSelector onMenuChange={this.handleMenuChange} />
           <DisplayedMenu {...this.state} />
         </main>
-        <footer>
+        <footer className="container">
           <Footer />
         </footer>
       </div>

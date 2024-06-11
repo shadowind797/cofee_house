@@ -28,7 +28,7 @@ class Home extends React.Component {
   }
   render() {
     return (
-      <>
+      <div id="homePage">
         <header id="header">
           <Header />
         </header>
@@ -164,7 +164,7 @@ class Home extends React.Component {
         <footer className="container" id="ftPlace">
           <Footer />
         </footer>
-      </>
+      </div>
     );
   }
 }

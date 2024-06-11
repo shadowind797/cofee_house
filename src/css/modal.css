@@ -24,7 +24,7 @@
   --bs-modal-footer-border-width: var(--bs-border-width);
   position: fixed;
   top: calc(50% - 252px);
-  left: calc(50% - 400px);;
+  left: calc(50% - 400px);
   z-index: var(--bs-modal-zindex);
   display: none;
   width: 800px;
@@ -33,7 +33,31 @@
   overflow-y: none;
   outline: 0;
   border-radius: 40px;
-  background-color: #E1D4c9;
+  background-color: #e1d4c9;
+}
+
+@media (max-width: 850px) {
+  .modal {
+    max-width: 688px;
+    max-height: 626px;
+    top: calc(50% - 252px);
+    left: calc(50% - 344px);
+  }
+}
+
+.burger {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: var(--bs-modal-zindex);
+  display: none;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+  overflow-y: none;
+  outline: 0;
+  background-color: #e1d4c9;
+  border-radius: 0;
 }
 
 .modal-dialog {
@@ -59,7 +83,7 @@
 }
 
 .modal-dialog-scrollable {
-  height: 0
+  height: 0;
 }
 .modal-dialog-scrollable .modal-content {
   max-height: 100%;
@@ -90,7 +114,7 @@
 .modal-backdrop {
   --bs-backdrop-zindex: 1050;
   --bs-backdrop-bg: #000;
-  --bs-backdrop-opacity: 0.66;
+  --bs-backdrop-opacity: 0.9;
   position: fixed;
   top: 0;
   left: 0;
@@ -151,8 +175,8 @@
   }
   .modal-dialog {
     max-width: var(--bs-modal-width);
-    margin-right: auto;
-    margin-left: auto;
+    margin-right: 0;
+    margin-left: 0;
   }
   .modal-sm {
     --bs-modal-width: 300px;

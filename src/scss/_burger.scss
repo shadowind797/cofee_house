@@ -1,0 +1,80 @@
+#burgerHeader {
+  background-color: #e1d4c9;
+  padding: 36px;
+  .cofeeHouse,
+  .ellipse,
+  .resourse {
+    position: absolute;
+  }
+  .cofeeHouse {
+    top: 63px;
+    left: 54px;
+    z-index: 3;
+  }
+  .ellipse {
+    top: 17px;
+    left: 67px;
+    z-index: 3;
+  }
+  .resourse {
+    top: 24px;
+    left: 38px;
+    z-index: 3;
+  }
+  #burgerClose {
+    position: absolute;
+    justify-content: center;
+    align-items: center;
+    width: 44px;
+    height: 44px;
+    right: 18px;
+    top: 21px;
+    flex-direction: column;
+    gap: 8px;
+    border-radius: 100px;
+    border: 1px solid #665f55;
+    display: none;
+    @media (max-width: 850px) {
+      display: flex;
+    }
+    img {
+      position: absolute;
+    }
+  }
+}
+
+#burgerMain {
+  align-items: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+  nav {
+    ul {
+      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 60px;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: 150%;
+    }
+  }
+  .copy {
+    display: flex;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+    p {
+      text-decoration: none;
+    }
+    &:hover {
+      opacity: 0.5;
+      cursor: pointer;
+    }
+    img {
+      margin-left: 8px;
+      margin-bottom: 3px;
+    }
+  }
+}

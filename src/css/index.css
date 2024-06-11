@@ -411,6 +411,7 @@ header {
   width: 100%;
   background-color: #e1d4c9;
   padding: 36px;
+  margin-bottom: 20px;
   align-items: center;
 }
 header .cofeeHouse,
@@ -470,6 +471,25 @@ header .wrapper {
   gap: 17em;
   align-items: right;
 }
+header .wrapper #burger {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  right: 18px;
+  top: 21px;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  display: none;
+}
+@media (max-width: 850px) {
+  header .wrapper #burger {
+    display: flex;
+  }
+}
 @media (max-width: 1245px) {
   header .wrapper {
     gap: 11em;
@@ -497,7 +517,7 @@ header ul li a:hover {
 
 footer {
   margin: auto;
-  margin-top: 100px;
+  padding-top: 100px;
   height: 450px;
 }
 footer #footer {
@@ -516,6 +536,7 @@ footer #footer {
 @media (max-width: 1050px) {
   footer #footer {
     flex-direction: column;
+    gap: 100px;
   }
 }
 footer #footer h3 {
@@ -613,6 +634,7 @@ main #mainDiv {
 @media (max-width: 850px) {
   main #mainDiv {
     margin-top: 30px;
+    padding: 100px 60px;
   }
 }
 main #mainDiv div {
@@ -655,6 +677,11 @@ main #mainDiv button {
 main #mainDiv button img {
   opacity: 0;
   transition: 300ms;
+}
+@media (max-width: 850px) {
+  main #mainDiv button img {
+    opacity: 1;
+  }
 }
 main #mainDiv button:hover img {
   opacity: 1.5;
@@ -941,39 +968,92 @@ main #download-div #download-info #downloadBtns button h6 {
   line-height: 150%;
 }
 
-#burger {
-  display: flex;
-  width: 100%;
+#burgerHeader {
   background-color: #e1d4c9;
   padding: 36px;
-  align-items: center;
 }
-#burger .cofeeHouse,
-#burger .ellipse,
-#burger .resourse {
+#burgerHeader .cofeeHouse,
+#burgerHeader .ellipse,
+#burgerHeader .resourse {
   position: absolute;
 }
-#burger .cofeeHouse {
+#burgerHeader .cofeeHouse {
   top: 63px;
   left: 54px;
   z-index: 3;
 }
-#burger .ellipse {
+#burgerHeader .ellipse {
   top: 17px;
   left: 67px;
   z-index: 3;
 }
-#burger .resourse {
+#burgerHeader .resourse {
   top: 24px;
   left: 38px;
   z-index: 3;
+}
+#burgerHeader #burgerClose {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  right: 18px;
+  top: 21px;
+  flex-direction: column;
+  gap: 8px;
+  border-radius: 100px;
+  border: 1px solid #665f55;
+  display: none;
+}
+@media (max-width: 850px) {
+  #burgerHeader #burgerClose {
+    display: flex;
+  }
+}
+#burgerHeader #burgerClose img {
+  position: absolute;
+}
+
+#burgerMain {
+  align-items: center;
+  padding-top: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 100px;
+}
+#burgerMain nav ul {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  gap: 60px;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+#burgerMain .copy {
+  display: flex;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+#burgerMain .copy p {
+  text-decoration: none;
+}
+#burgerMain .copy:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+#burgerMain .copy img {
+  margin-left: 8px;
+  margin-bottom: 3px;
 }
 
 h1 {
   font-size: 60px;
   font-weight: 600;
   line-height: 125%;
-  width: 800px;
+  max-width: 800px;
   margin: auto;
 }
 h1 span {
@@ -1017,7 +1097,7 @@ h1 span {
 
 #menu {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   gap: 30px;
   flex-wrap: wrap;
   margin-top: 50px;
@@ -1075,6 +1155,11 @@ h1 span {
 #modal img {
   border-radius: 40px;
 }
+@media (max-width: 850px) {
+  #modal #info {
+    max-width: 70%;
+  }
+}
 #modal #info h4 {
   font-size: 24px;
   font-weight: 600;
@@ -1092,8 +1177,8 @@ h1 span {
 }
 #modal #info #price {
   display: flex;
+  justify-content: space-between;
   margin-top: 20px;
-  gap: 68%;
 }
 #modal #info #varning {
   display: flex;
@@ -1111,10 +1196,18 @@ h1 span {
 }
 #modal #selector {
   display: flex;
-  vertical-align: top;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  align-content: flex-start;
+  align-self: stretch;
   width: 377px;
   gap: 16px;
   margin-top: 8px;
+}
+@media (max-width: 850px) {
+  #modal #selector {
+    gap: 8px;
+  }
 }
 #modal #selector button {
   display: flex;
@@ -1168,27 +1261,72 @@ a {
   color: inherit;
 }
 
-.container {
+#homePage .container {
   max-width: 1360px;
   margin: auto;
 }
 @media (max-width: 1430px) {
-  .container {
+  #homePage .container {
     max-width: 1200px;
   }
 }
 @media (max-width: 1370px) {
-  .container {
+  #homePage .container {
     max-width: 1150px;
   }
 }
 @media (max-width: 1230px) {
-  .container {
+  #homePage .container {
     max-width: 1000px;
   }
 }
 @media (max-width: 1050px) {
-  .container {
+  #homePage .container {
     max-width: 800px;
+  }
+}
+@media (max-width: 850px) {
+  #homePage .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 800px) {
+  #homePage .container {
+    max-width: 670px;
+  }
+}
+
+.menuPage .container {
+  max-width: 1360px;
+  margin: auto;
+}
+@media (max-width: 1430px) {
+  .menuPage .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1370px) {
+  .menuPage .container {
+    max-width: 1150px;
+  }
+}
+@media (max-width: 1230px) {
+  .menuPage .container {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 1050px) {
+  .menuPage .container {
+    max-width: 1000px;
+  }
+}
+@media (max-width: 850px) {
+  .menuPage .container {
+    max-width: 720px;
+  }
+}
+@media (max-width: 800px) {
+  .menuPage .container {
+    max-width: 670px;
   }
 }/*# sourceMappingURL=index.css.map */

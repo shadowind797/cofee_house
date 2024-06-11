@@ -7,6 +7,9 @@
     border-radius: 40px;
   }
   #info {
+    @media (max-width: 850px) {
+      max-width: 70%;
+    }
     h4 {
       font-size: 24px;
       font-weight: 600;
@@ -24,8 +27,8 @@
     }
     #price {
       display: flex;
+      justify-content: space-between;
       margin-top: 20px;
-      gap: 68%;
     }
     #varning {
       display: flex;
@@ -44,10 +47,16 @@
   }
   #selector {
     display: flex;
-    vertical-align: top;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: flex-start;
+    align-self: stretch;
     width: 377px;
     gap: 16px;
     margin-top: 8px;
+    @media (max-width: 850px) {
+      gap: 8px;
+    }
     button {
       display: flex;
       padding: 8px 16px 8px 8px;
