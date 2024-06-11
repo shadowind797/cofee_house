@@ -32,7 +32,7 @@ class Home extends React.Component {
         <header id="header">
           <Header />
         </header>
-        <main>
+        <main className="container">
           <div id="mainDiv" className="container">
             <div>
               <h1>
@@ -161,7 +161,7 @@ class Home extends React.Component {
             </div>
           </div>
         </main>
-        <footer id="ftPlace">
+        <footer className="container" id="ftPlace">
           <Footer />
         </footer>
       </>

@@ -409,7 +409,7 @@ textarea {
 header {
   display: flex;
   width: 100%;
-  background-color: #E1D4C9;
+  background-color: #e1d4c9;
   padding: 36px;
   align-items: center;
 }
@@ -438,11 +438,21 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
+@media (max-width: 850px) {
+  header nav {
+    display: none;
+  }
+}
 header .copy {
   display: flex;
   font-size: 16px;
   font-weight: 600;
   line-height: 150%;
+}
+@media (max-width: 850px) {
+  header .copy {
+    display: none;
+  }
 }
 header .copy p {
   text-decoration: none;
@@ -455,24 +465,19 @@ header .copy img {
   margin-left: 8px;
   margin-bottom: 3px;
 }
-@media (max-width: 880px) {
-  header .copy {
-    display: none;
-  }
-}
 header .wrapper {
   display: flex;
   gap: 17em;
   align-items: right;
 }
-@media (max-width: 1230px) {
+@media (max-width: 1245px) {
   header .wrapper {
-    gap: 43px;
+    gap: 11em;
   }
 }
-@media (max-width: 880px) {
+@media (max-width: 1050px) {
   header .wrapper {
-    display: none;
+    gap: 6em;
   }
 }
 header ul {
@@ -493,7 +498,6 @@ header ul li a:hover {
 footer {
   margin: auto;
   margin-top: 100px;
-  width: 1360px;
   height: 450px;
 }
 footer #footer {
@@ -503,6 +507,16 @@ footer #footer {
   background-color: #665f55;
   border-radius: 40px;
   padding: 100px;
+}
+@media (max-width: 1230px) {
+  footer #footer {
+    gap: 4em;
+  }
+}
+@media (max-width: 1050px) {
+  footer #footer {
+    flex-direction: column;
+  }
 }
 footer #footer h3 {
   width: 530px;
@@ -581,6 +595,378 @@ footer #footer p {
 }
 footer #footer p img {
   padding-right: 8px;
+}
+
+main {
+  text-align: center;
+}
+main #mainDiv {
+  text-align: left;
+  margin: auto;
+  margin-bottom: 100px;
+  padding: 100px;
+  background: url("../img/first_div_bg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 40px;
+}
+@media (max-width: 850px) {
+  main #mainDiv {
+    margin-top: 30px;
+  }
+}
+main #mainDiv div {
+  width: 530px;
+}
+main #mainDiv div h1 {
+  display: inline;
+  font-size: 72px;
+  font-weight: 600;
+  line-height: 105%;
+  color: #e1d4c9;
+}
+main #mainDiv div h1 span {
+  font-size: 72px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 105%;
+  color: #b0907a;
+}
+main #mainDiv p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  color: #e1d4c9;
+  margin: 40px 0;
+  width: 530px;
+}
+main #mainDiv button {
+  display: flex;
+  gap: 7px;
+  width: 200px;
+  padding: 20px 78px;
+  background-color: #e1d4c9;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+  border: none;
+  border-radius: 100px;
+}
+main #mainDiv button img {
+  opacity: 0;
+  transition: 300ms;
+}
+main #mainDiv button:hover img {
+  opacity: 1.5;
+}
+main h2 {
+  display: inline;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+  margin-bottom: 40px;
+}
+main h2 span {
+  font-style: italic;
+  color: #b0907a;
+}
+main .slider__item-content {
+  margin: 40px;
+}
+main .slider__item-content #slider-text {
+  margin-left: calc(50% - 240px);
+}
+main .slider__item-content #slider-text h5 {
+  width: 480px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+  padding-bottom: 16px;
+}
+main .slider__item-content #slider-text p {
+  width: 480px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+  padding-bottom: 16px;
+}
+main .slider__item-content #slider-text h4 {
+  width: 480px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 125%;
+}
+main #carousel {
+  margin-bottom: 100px;
+}
+main #about {
+  text-align: left;
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+main #about span {
+  color: #b0907a;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+}
+main #images {
+  margin-top: 40px;
+}
+main #images div {
+  margin: auto;
+  display: flex;
+}
+@media (max-width: 850px) {
+  main #images div {
+    display: block;
+    margin: auto;
+  }
+}
+main #images div img {
+  vertical-align: top;
+}
+main #images div .col {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+@media (max-width: 850px) {
+  main #images div .col {
+    align-items: center;
+  }
+}
+main #images .about-1 {
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+@media (max-width: 1430px) {
+  main #images .about-1 {
+    width: 550px;
+    height: 480px;
+  }
+}
+@media (max-width: 1230px) {
+  main #images .about-1 {
+    width: 440px;
+    height: 384px;
+  }
+}
+@media (max-width: 1050px) {
+  main #images .about-1 {
+    width: 400px;
+    height: 346px;
+  }
+}
+@media (max-width: 850px) {
+  main #images .about-1 {
+    margin-top: 40px;
+    width: 660px;
+    height: 590px;
+    margin-right: 0;
+  }
+}
+main #images .about-3 {
+  width: 660px;
+  height: 430px;
+  border-radius: 20px;
+}
+@media (max-width: 1430px) {
+  main #images .about-3 {
+    width: 550px;
+    height: 358px;
+  }
+}
+@media (max-width: 1230px) {
+  main #images .about-3 {
+    width: 440px;
+    height: 322px;
+  }
+}
+@media (max-width: 1050px) {
+  main #images .about-3 {
+    width: 400px;
+    height: 290px;
+  }
+}
+@media (max-width: 850px) {
+  main #images .about-3 {
+    display: none;
+  }
+}
+main #images .about-2 {
+  width: 660px;
+  height: 430px;
+  border-radius: 20px;
+  margin-right: 40px;
+}
+@media (max-width: 1430px) {
+  main #images .about-2 {
+    width: 550px;
+    height: 358px;
+  }
+}
+@media (max-width: 1230px) {
+  main #images .about-2 {
+    width: 440px;
+    height: 322px;
+  }
+}
+@media (max-width: 1050px) {
+  main #images .about-2 {
+    width: 400px;
+    height: 290px;
+  }
+}
+@media (max-width: 850px) {
+  main #images .about-2 {
+    display: none;
+  }
+}
+main #images .about-4 {
+  width: 660px;
+  height: 590px;
+  border-radius: 20px;
+}
+@media (max-width: 1430px) {
+  main #images .about-4 {
+    width: 550px;
+    height: 480px;
+  }
+}
+@media (max-width: 1230px) {
+  main #images .about-4 {
+    width: 440px;
+    height: 384px;
+  }
+}
+@media (max-width: 1050px) {
+  main #images .about-4 {
+    width: 400px;
+    height: 346px;
+  }
+}
+@media (max-width: 850px) {
+  main #images .about-4 {
+    margin-top: 40px;
+    width: 660px;
+    height: 590px;
+  }
+}
+main #download-div {
+  display: flex;
+  margin-top: 100px;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 1230px) {
+  main #download-div {
+    flex-direction: column;
+    gap: 100px;
+    margin-bottom: 100px;
+  }
+}
+main #download-div #download-info {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  text-align: left;
+  width: 630px;
+}
+main #download-div #download-info h3 {
+  font-size: 60px;
+  font-weight: 600;
+  line-height: 125%;
+}
+main #download-div #download-info h3 span {
+  color: #b0907a;
+  font-size: 60px;
+  font-style: italic;
+  font-weight: 600;
+  line-height: 125%;
+}
+main #download-div #download-info p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 150%;
+}
+main #download-div #download-info #downloadBtns {
+  display: flex;
+  gap: 20px;
+}
+main #download-div #download-info #downloadBtns button {
+  padding: 12px;
+  width: 200px;
+  display: flex;
+  gap: 2px;
+  border: 1px solid #665f55;
+  border-radius: 100px;
+  background-color: #e1d4c9;
+  transition: 300ms;
+}
+main #download-div #download-info #downloadBtns button:hover {
+  background-color: #665f55;
+  color: #e1d4c9;
+}
+main #download-div #download-info #downloadBtns button:hover #butImg {
+  background-image: url("../img/appStore_hover.svg");
+}
+main #download-div #download-info #downloadBtns button:hover #butImg2 {
+  background-image: url("../img/googlePlay_hover.svg");
+}
+main #download-div #download-info #downloadBtns button #butImg {
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/appStore.svg");
+  transition: 300ms;
+}
+main #download-div #download-info #downloadBtns button #butImg2 {
+  width: 36px;
+  height: 36px;
+  background-image: url("../img/googlePlay.svg");
+  transition: 300ms;
+}
+main #download-div #download-info #downloadBtns button p {
+  font-size: 10px;
+  font-weight: 600;
+  line-height: 140%;
+}
+main #download-div #download-info #downloadBtns button h6 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 150%;
+}
+
+#burger {
+  display: flex;
+  width: 100%;
+  background-color: #e1d4c9;
+  padding: 36px;
+  align-items: center;
+}
+#burger .cofeeHouse,
+#burger .ellipse,
+#burger .resourse {
+  position: absolute;
+}
+#burger .cofeeHouse {
+  top: 63px;
+  left: 54px;
+  z-index: 3;
+}
+#burger .ellipse {
+  top: 17px;
+  left: 67px;
+  z-index: 3;
+}
+#burger .resourse {
+  top: 24px;
+  left: 38px;
+  z-index: 3;
 }
 
 h1 {
@@ -774,16 +1160,27 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #e1d4c9;
   color: #403f3d;
+  margin: auto;
 }
 
 a {
   text-decoration: none;
-  color: inherit; /* or any color you prefer */
+  color: inherit;
 }
 
 .container {
   max-width: 1360px;
   margin: auto;
+}
+@media (max-width: 1430px) {
+  .container {
+    max-width: 1200px;
+  }
+}
+@media (max-width: 1370px) {
+  .container {
+    max-width: 1150px;
+  }
 }
 @media (max-width: 1230px) {
   .container {
@@ -794,227 +1191,4 @@ a {
   .container {
     max-width: 800px;
   }
-}
-
-main {
-  text-align: center;
-}
-main #mainDiv {
-  text-align: left;
-  margin: 40px 40px 100px 40px;
-  padding: 100px;
-  background: url("../img/first_div_bg.jpg");
-  background-repeat: no-repeat;
-  border-radius: 40px;
-}
-main #mainDiv div {
-  width: 530px;
-}
-main #mainDiv div h1 {
-  display: inline;
-  font-size: 72px;
-  font-weight: 600;
-  line-height: 105%;
-  color: #e1d4c9;
-}
-main #mainDiv div h1 span {
-  font-size: 72px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 105%;
-  color: #b0907a;
-}
-main #mainDiv p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 150%;
-  color: #e1d4c9;
-  margin: 40px 0;
-  width: 530px;
-}
-main #mainDiv button {
-  display: flex;
-  gap: 7px;
-  width: 200px;
-  padding: 20px 78px;
-  background-color: #e1d4c9;
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 150%;
-  border: none;
-  border-radius: 100px;
-}
-main #mainDiv button img {
-  opacity: 0;
-  transition: 300ms;
-}
-main #mainDiv button:hover img {
-  opacity: 1.5;
-}
-main h2 {
-  display: inline;
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 125%;
-  margin-bottom: 40px;
-}
-main h2 span {
-  font-style: italic;
-  color: #b0907a;
-}
-main .slider__item-content {
-  margin: 40px;
-}
-main .slider__item-content #slider-text {
-  margin-left: calc(50% - 240px);
-}
-main .slider__item-content #slider-text h5 {
-  width: 480px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 125%;
-  padding-bottom: 16px;
-}
-main .slider__item-content #slider-text p {
-  width: 480px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 150%;
-  padding-bottom: 16px;
-}
-main .slider__item-content #slider-text h4 {
-  width: 480px;
-  font-size: 24px;
-  font-weight: 600;
-  line-height: 125%;
-}
-main #carousel {
-  margin-bottom: 100px;
-}
-main #about {
-  text-align: left;
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 125%;
-}
-main #about span {
-  color: #b0907a;
-  font-size: 60px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 125%;
-}
-main #images {
-  margin-top: 40px;
-}
-main #images div {
-  margin: auto;
-  display: flex;
-  gap: 40px;
-}
-main #images div img {
-  vertical-align: top;
-}
-main #images div .col {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-}
-main #images .about-1 {
-  width: 660px;
-  height: 590px;
-  border-radius: 20px;
-  margin-right: 40px;
-}
-main #images .about-3 {
-  width: 660px;
-  height: 430px;
-  border-radius: 20px;
-}
-main #images .about-2 {
-  width: 660px;
-  height: 430px;
-  border-radius: 20px;
-  margin-right: 40px;
-}
-main #images .about-4 {
-  width: 660px;
-  height: 590px;
-  border-radius: 20px;
-}
-main #download-div {
-  display: flex;
-  margin-top: 100px;
-  justify-content: center;
-  align-items: center;
-}
-main #download-div #download-info {
-  display: flex;
-  flex-direction: column;
-  gap: 40px;
-  text-align: left;
-  width: 630px;
-}
-main #download-div #download-info h3 {
-  font-size: 60px;
-  font-weight: 600;
-  line-height: 125%;
-}
-main #download-div #download-info h3 span {
-  color: #b0907a;
-  font-size: 60px;
-  font-style: italic;
-  font-weight: 600;
-  line-height: 125%;
-}
-main #download-div #download-info p {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 150%;
-}
-main #download-div #download-info #downloadBtns {
-  display: flex;
-  gap: 20px;
-}
-main #download-div #download-info #downloadBtns button {
-  padding: 12px;
-  width: 200px;
-  display: flex;
-  gap: 2px;
-  border: 1px solid #665f55;
-  border-radius: 100px;
-  background-color: #e1d4c9;
-  transition: 300ms;
-}
-main #download-div #download-info #downloadBtns button:hover {
-  background-color: #665f55;
-  color: #e1d4c9;
-}
-main #download-div #download-info #downloadBtns button:hover #butImg {
-  background-image: url("../img/appStore_hover.svg");
-}
-main #download-div #download-info #downloadBtns button:hover #butImg2 {
-  background-image: url("../img/googlePlay_hover.svg");
-}
-main #download-div #download-info #downloadBtns button #butImg {
-  width: 36px;
-  height: 36px;
-  background-image: url("../img/appStore.svg");
-  transition: 300ms;
-}
-main #download-div #download-info #downloadBtns button #butImg2 {
-  width: 36px;
-  height: 36px;
-  background-image: url("../img/googlePlay.svg");
-  transition: 300ms;
-}
-main #download-div #download-info #downloadBtns button p {
-  font-size: 10px;
-  font-weight: 600;
-  line-height: 140%;
-}
-main #download-div #download-info #downloadBtns button h6 {
-  font-size: 16px;
-  font-weight: 600;
-  line-height: 150%;
 }/*# sourceMappingURL=index.css.map */

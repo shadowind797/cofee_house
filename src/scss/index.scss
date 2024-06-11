@@ -1,6 +1,8 @@
 @import "reset.scss";
 @import "header.scss";
 @import "footer.scss";
+@import "home.scss";
+@import "burger.scss";
 @import "menu.scss";
 @import "modal.scss";
 
@@ -8,17 +10,23 @@ body {
   font-family: "Inter", sans-serif;
   background-color: #e1d4c9;
   color: #403f3d;
+  margin: auto;
 }
 
 a {
   text-decoration: none;
-  color: inherit; /* or any color you prefer */
+  color: inherit;
 }
 
 .container {
   max-width: 1360px;
   margin: auto;
-
+  @media (max-width: 1430px) {
+    max-width: 1200px;
+  }
+  @media (max-width: 1370px) {
+    max-width: 1150px;
+  }
   @media (max-width: 1230px) {
     max-width: 1000px;
   }
@@ -27,227 +35,4 @@ a {
   }
 }
 
-main {
-  text-align: center;
-  #mainDiv {
-    text-align: left;
-    margin: 40px 40px 100px 40px;
-    padding: 100px;
-    background: url("../img/first_div_bg.jpg");
-    background-repeat: no-repeat;
-    border-radius: 40px;
-    div {
-      width: 530px;
-      h1 {
-        display: inline;
-        font-size: 72px;
-        font-weight: 600;
-        line-height: 105%;
-        color: #e1d4c9;
-        span {
-          font-size: 72px;
-          font-style: italic;
-          font-weight: 600;
-          line-height: 105%;
-          color: #b0907a;
-        }
-      }
-    }
-    p {
-      font-size: 16px;
-      font-weight: 400;
-      line-height: 150%;
-      color: #e1d4c9;
-      margin: 40px 0;
-      width: 530px;
-    }
-    button {
-      display: flex;
-      gap: 7px;
-      width: 200px;
-      padding: 20px 78px;
-      background-color: #e1d4c9;
-      font-size: 16px;
-      font-weight: 600;
-      line-height: 150%;
-      border: none;
-      border-radius: 100px;
-      img {
-        opacity: 0;
-        transition: 300ms;
-      }
-      &:hover {
-        img {
-          opacity: 1.5;
-        }
-      }
-    }
-  }
-  h2 {
-    display: inline;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 125%;
-    margin-bottom: 40px;
-    span {
-      font-style: italic;
-      color: #b0907a;
-    }
-  }
-  .slider__item-content {
-    margin: 40px;
-    #slider-text {
-      margin-left: calc(50% - 240px);
-      h5 {
-        width: 480px;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 125%;
-        padding-bottom: 16px;
-      }
-      p {
-        width: 480px;
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
-        padding-bottom: 16px;
-      }
-      h4 {
-        width: 480px;
-        font-size: 24px;
-        font-weight: 600;
-        line-height: 125%;
-      }
-    }
-  }
-  #carousel {
-    margin-bottom: 100px;
-  }
-  #about {
-    text-align: left;
-    font-size: 60px;
-    font-weight: 600;
-    line-height: 125%;
-    span {
-      color: #b0907a;
-      font-size: 60px;
-      font-style: italic;
-      font-weight: 600;
-      line-height: 125%;
-    }
-  }
-  #images {
-    margin-top: 40px;
-    div {
-      margin: auto;
-      display: flex;
-      gap: 40px;
-      img {
-        vertical-align: top;
-      }
-      .col {
-        display: flex;
-        flex-direction: column;
-        gap: 40px;
-      }
-    }
-    .about-1 {
-      width: 660px;
-      height: 590px;
-      border-radius: 20px;
-      margin-right: 40px;
-    }
-    .about-3 {
-      width: 660px;
-      height: 430px;
-      border-radius: 20px;
-    }
-    .about-2 {
-      width: 660px;
-      height: 430px;
-      border-radius: 20px;
-      margin-right: 40px;
-    }
-    .about-4 {
-      width: 660px;
-      height: 590px;
-      border-radius: 20px;
-    }
-  }
-  #download-div {
-    display: flex;
-    margin-top: 100px;
-    justify-content: center;
-    align-items: center;
-    #download-info {
-      display: flex;
-      flex-direction: column;
-      gap: 40px;
-      text-align: left;
-      width: 630px;
-      h3 {
-        font-size: 60px;
-        font-weight: 600;
-        line-height: 125%;
-        span {
-          color: #b0907a;
-          font-size: 60px;
-          font-style: italic;
-          font-weight: 600;
-          line-height: 125%;
-        }
-      }
-      p {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 150%;
-      }
-      #downloadBtns {
-        display: flex;
-        gap: 20px;
-        button {
-          padding: 12px;
-          width: 200px;
-          display: flex;
-          gap: 2px;
-          border: 1px solid #665f55;
-          border-radius: 100px;
-          background-color: #e1d4c9;
-          transition: 300ms;
-          &:hover {
-            background-color: #665f55;
-            color: #e1d4c9;
-            #butImg {
-              background-image: url("../img/appStore_hover.svg");
-            }
-            #butImg2 {
-              background-image: url("../img/googlePlay_hover.svg");
-            }
-          }
-          #butImg {
-            width: 36px;
-            height: 36px;
-            background-image: url("../img/appStore.svg");
-            transition: 300ms;
-          }
-          #butImg2 {
-            width: 36px;
-            height: 36px;
-            background-image: url("../img/googlePlay.svg");
-            transition: 300ms;
-          }
-          p {
-            font-size: 10px;
-            font-weight: 600;
-            line-height: 140%;
-          }
-          h6 {
-            font-size: 16px;
-            font-weight: 600;
-            line-height: 150%;
-          }
-        }
-      }
-    }
-  }
-}
+

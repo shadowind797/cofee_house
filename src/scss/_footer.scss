@@ -1,7 +1,6 @@
 footer {
   margin: auto;
   margin-top: 100px;
-  width: 1360px;
   height: 450px;
   #footer {
     display: flex;
@@ -10,6 +9,12 @@ footer {
     background-color: #665f55;
     border-radius: 40px;
     padding: 100px;
+    @media (max-width: 1230px) {
+      gap: 4em;
+    }
+    @media (max-width: 1050px) {
+      flex-direction: column;
+    }
     h3 {
       width: 530px;
       font-size: 60px;
