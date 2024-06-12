@@ -71,7 +71,7 @@ class Home extends React.Component {
                     <div className="slider__items">
                       <div className="slider__item">
                         <div className="slider__item-container">
-                          <div className="slider__item-content">
+                          <div className="slider__item-content ">
                             <div id="slider-img-1">
                               <Img img={sliderImg_1} />
                             </div>

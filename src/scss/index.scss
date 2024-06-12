@@ -22,7 +22,8 @@ a {
   align-self: center;
   .container {
     max-width: 1360px;
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
     @media (max-width: 1430px) {
       max-width: 1200px;
     }
@@ -42,6 +43,7 @@ a {
       max-width: 670px;
     }
     @media (max-width: 720px) {
+      padding-left: 20px;
       max-width: 600px;
     }
     @media (max-width: 670px) {
@@ -58,6 +60,15 @@ a {
     }
     @media (max-width: 510px) {
       max-width: 430px;
+    }
+    @media (max-width: 450px) {
+      max-width: 380px;
+    }
+    @media (max-width: 430px) {
+      max-width: 340px;
+    }
+    @media (max-width: 380px) {
+      max-width: 290px;
     }
   }
 }
@@ -83,6 +94,12 @@ a {
     }
     @media (max-width: 800px) {
       max-width: 670px;
+    }
+    @media (max-width: 680px) {
+      max-width: 600px;
+    }
+    @media (max-width: 720px) {
+      padding-left: 20px;
     }
   }
 }

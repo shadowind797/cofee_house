@@ -5,6 +5,9 @@
   padding: 16px;
   img {
     border-radius: 40px;
+    @media (max-width: 670px) {
+      display: none;
+    }
   }
   #info {
     @media (max-width: 850px) {

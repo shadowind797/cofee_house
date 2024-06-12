@@ -40,8 +40,17 @@
   .modal {
     width: 688px;
     height: 626px;
-    top: calc(50% - 252px);
+    top: calc(50% - 313px);
     left: calc(50% - 344px);
+  }
+}
+
+@media (max-width: 670px) {
+  .modal {
+    width: 342px;
+    height: 636px;
+    top: calc(50% - 318px);
+    left: calc(50% - 171px);
   }
 }
 

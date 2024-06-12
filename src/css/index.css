@@ -539,6 +539,13 @@ footer #footer {
     gap: 100px;
   }
 }
+@media (max-width: 670px) {
+  footer #footer {
+    padding: 20px;
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+}
 footer #footer h3 {
   max-width: 530px;
   font-size: 60px;
@@ -659,6 +666,11 @@ main #mainDiv div {
     width: 316px;
   }
 }
+@media (max-width: 670px) {
+  main #mainDiv div {
+    width: 236px;
+  }
+}
 main #mainDiv div h1 {
   display: inline;
   font-size: 72px;
@@ -671,7 +683,12 @@ main #mainDiv div h1 {
     font-size: 42px;
     font-weight: 600;
     line-height: 115%;
-    width: 316px;
+    max-width: 316px;
+  }
+}
+@media (max-width: 430px) {
+  main #mainDiv div h1 {
+    max-width: 236px;
   }
 }
 main #mainDiv div h1 span {
@@ -756,48 +773,31 @@ main h2 span {
 main .slider__item-content {
   margin: 40px;
 }
-main .slider__item-content #slider-text {
-  margin-left: calc(50% - 240px);
-}
 main .slider__item-content #slider-text h5 {
+  margin: auto;
   max-width: 480px;
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
   padding-bottom: 16px;
 }
-@media (max-width: 600px) {
-  main .slider__item-content #slider-text h5 {
-    width: 380px;
-  }
-}
-@media (max-width: 550px) {
-  main .slider__item-content #slider-text h5 {
-    width: 350px;
-  }
-}
 main .slider__item-content #slider-text p {
+  margin: auto;
   max-width: 480px;
   font-size: 16px;
   font-weight: 400;
   line-height: 150%;
   padding-bottom: 16px;
 }
-@media (max-width: 600px) {
-  main .slider__item-content #slider-text p {
-    width: 380px;
-  }
-}
-@media (max-width: 550px) {
-  main .slider__item-content #slider-text p {
-    width: 350px;
-  }
-}
 main .slider__item-content #slider-text h4 {
+  margin: auto;
   max-width: 480px;
   font-size: 24px;
   font-weight: 600;
   line-height: 125%;
+}
+main .slider__item-content img {
+  margin: auto;
 }
 @media (max-width: 600px) {
   main .slider__item-content img {
@@ -910,6 +910,12 @@ main #images .about-1 {
     height: 420px;
   }
 }
+@media (max-width: 450px) {
+  main #images .about-1 {
+    width: 340px;
+    height: 315px;
+  }
+}
 main #images .about-3 {
   width: 660px;
   height: 430px;
@@ -1008,6 +1014,12 @@ main #images .about-4 {
     height: 420px;
   }
 }
+@media (max-width: 450px) {
+  main #images .about-4 {
+    width: 340px;
+    height: 315px;
+  }
+}
 main #download-div {
   display: flex;
   margin-top: 100px;
@@ -1027,7 +1039,7 @@ main #download-div #download-info {
   flex-direction: column;
   gap: 40px;
   text-align: left;
-  width: 630px;
+  max-width: 630px;
 }
 main #download-div #download-info h3 {
   font-size: 60px;
@@ -1063,6 +1075,11 @@ main #download-div #download-info p {
 main #download-div #download-info #downloadBtns {
   display: flex;
   gap: 20px;
+}
+@media (max-width: 390px) {
+  main #download-div #download-info #downloadBtns {
+    flex-direction: column;
+  }
 }
 main #download-div #download-info #downloadBtns button {
   padding: 12px;
@@ -1226,8 +1243,12 @@ h1 span {
   display: flex;
   width: 377px;
   gap: 16px;
-  margin: auto;
-  margin-top: 40px;
+  margin: 40px auto;
+}
+@media (max-width: 720px) {
+  #menu-type-div {
+    margin-left: 20px;
+  }
 }
 #menu-type-div button {
   display: flex;
@@ -1263,7 +1284,12 @@ h1 span {
   justify-content: flex-start;
   gap: 30px;
   flex-wrap: wrap;
-  margin-top: 50px;
+  margin: 50px auto;
+}
+@media (max-width: 720px) {
+  #menu {
+    justify-content: center;
+  }
 }
 #menu .menuCard {
   width: 310px;
@@ -1317,6 +1343,11 @@ h1 span {
 }
 #modal img {
   border-radius: 40px;
+}
+@media (max-width: 670px) {
+  #modal img {
+    display: none;
+  }
 }
 @media (max-width: 850px) {
   #modal #info {
@@ -1428,7 +1459,8 @@ a {
 }
 #homePage .container {
   max-width: 1360px;
-  margin: auto;
+  margin-left: auto;
+  margin-right: auto;
 }
 @media (max-width: 1430px) {
   #homePage .container {
@@ -1462,6 +1494,7 @@ a {
 }
 @media (max-width: 720px) {
   #homePage .container {
+    padding-left: 20px;
     max-width: 600px;
   }
 }
@@ -1488,6 +1521,21 @@ a {
 @media (max-width: 510px) {
   #homePage .container {
     max-width: 430px;
+  }
+}
+@media (max-width: 450px) {
+  #homePage .container {
+    max-width: 380px;
+  }
+}
+@media (max-width: 430px) {
+  #homePage .container {
+    max-width: 340px;
+  }
+}
+@media (max-width: 380px) {
+  #homePage .container {
+    max-width: 290px;
   }
 }
 
@@ -1523,5 +1571,15 @@ a {
 @media (max-width: 800px) {
   .menuPage .container {
     max-width: 670px;
+  }
+}
+@media (max-width: 680px) {
+  .menuPage .container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 720px) {
+  .menuPage .container {
+    padding-left: 20px;
   }
 }/*# sourceMappingURL=index.css.map */
