@@ -1076,7 +1076,7 @@ main #download-div #download-info #downloadBtns {
   display: flex;
   gap: 20px;
 }
-@media (max-width: 390px) {
+@media (max-width: 430px) {
   main #download-div #download-info #downloadBtns {
     flex-direction: column;
   }
@@ -1576,6 +1576,11 @@ a {
 @media (max-width: 680px) {
   .menuPage .container {
     max-width: 600px;
+  }
+}
+@media (max-width: 480px) {
+  .menuPage .container {
+    max-width: 400px;
   }
 }
 @media (max-width: 720px) {
